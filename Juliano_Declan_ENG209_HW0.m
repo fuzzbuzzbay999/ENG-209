@@ -10,3 +10,4 @@ end
 
 %call findlen
 findlen(12,12);
+plot(11,2,'go')
