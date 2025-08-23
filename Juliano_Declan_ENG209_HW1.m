@@ -85,12 +85,12 @@ disp(['The two short sides have lengths of: ', num2str(a), ' and ', num2str(b)])
 disp(['The hypotenuse has a length of ', num2str(c)]);                              %display the hypotenuse
                                         
                                         %ii
-av = [3,5,6,7,8,9,9,10,11,12];          %initialize array av
-bv = [4,12,8,24,15,12,40,24,60,16];     %initialize array bv
-c = sqrt(av.^2 + bv.^2);                %calculate the hypotenuses for each pair of sides in av and bv
+av = [3,5,6,7,8,9,9,10,11,12];           %initialize array av
+bv = [4,12,8,24,15,12,40,24,60,16];      %initialize array bv
+c = sqrt(av.^2 + bv.^2);                 %calculate the hypotenuses for each pair of sides in av and bv
 
 disp(['The short sides have lengths ', num2str(av)])                    %display the sides
-disp(['and their coresponding sides lengths are ', num2str(bv)]);       
+disp(['And their coresponding sides lengths are ', num2str(bv)]);       
 disp(['The coresponding hypotenuses have lengths of ', num2str(c)]);    %display the hypotenuse
 
                                         %iii
@@ -101,5 +101,5 @@ match = zeros(1,length(c));              %initialize array match to store result
 for i = 1:length(c)                      %loop through c
     match(i) = c(i) == c_test(i);        %compare c and c_test and store result either 1 or 0
 end    
-disp(['the result of the compairison is: ', num2str(match)])   %display the results of the comparison
+disp(['The result of the compairison is: ', num2str(match)])   %display the results of the comparison
                            
