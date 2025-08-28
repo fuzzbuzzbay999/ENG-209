@@ -33,3 +33,7 @@ M2 = 90;              %mass of person (kg)
 R = 6.38e6+400000;                %radius of Earth + height of man (m)
 F = (G * (M1 * M2)) / R^2;    %calculate gravitational force (N)
 disp(['Gravitational force between Earth and Moon: ', num2str(F), ' N']);   %display result
+sv =[66,72,75,79,81,85,88,90,92,99]
+    sv=sum(sv)/length(sv)
+
+h=[1:5].^2
