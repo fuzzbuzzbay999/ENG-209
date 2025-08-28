@@ -14,10 +14,11 @@ vector2 = [vector1(1:2:end)]
 
         %question 2
         %i
-Q2i = [4:3:16]
+dif = 3;
+Q2i = [4:dif:16;19:dif:31;34:dif:46;49:dif:61]
         %ii
-
+dif = 15;
+Q2ii = [4:dif:49;7:dif:52;10:dif:55;13:dif:58;16:dif:61]'
         %iii
-Q2iii = linspace(4,61,20)
-Q2111 = reshape(Q2iii,4,5)'
+Q2111 = reshape(4:3:61,5,4)'
         %iv

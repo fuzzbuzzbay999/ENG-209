@@ -27,3 +27,9 @@ y=linspace(0.8,3.2,5)
 d=x.^2+2*(x.*y);
 z=x.*y.*exp(y./x)-nthroot((x.^4.*y.^3+8.5),3)
 
+G = 6.674e-11;             %gravitational constant (m3/kg/s2)
+M1 = 5.972e24;              %mass of Earth (kg)
+M2 = 90;              %mass of person (kg)
+R = 6.38e6+400000;                %radius of Earth + height of man (m)
+F = (G * (M1 * M2)) / R^2;    %calculate gravitational force (N)
+disp(['Gravitational force between Earth and Moon: ', num2str(F), ' N']);   %display result
