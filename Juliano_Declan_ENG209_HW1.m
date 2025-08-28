@@ -68,11 +68,11 @@ for i=1:length(h)
 end
 
 %***************************************question 6********************************
-G = -6.674e-11;             %gravitational constant (m3/kg/s2)
+G = 6.674e-11;             %gravitational constant (m3/kg/s2)
 M1 = 5.972e24;              %mass of Earth (kg)
 M2 = 7.348e22;              %mass of Moon (kg)
 R = 3.844e8;                %distance between Earth and Moon (m)
-F = G * (M1 * M2) / R^2;    %calculate gravitational force (N)
+F = (G * (M1 * M2)) / R^2;    %calculate gravitational force (N)
 disp(['Gravitational force between Earth and Moon: ', num2str(F), ' N']);   %display result
 
 %***************************************question 7********************************
