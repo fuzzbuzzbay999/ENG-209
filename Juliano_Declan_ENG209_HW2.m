@@ -14,11 +14,14 @@ vector2 = [vector1(1:2:end)]
         %amount each value will change accross the rows
 dif = 3;
         %i
+        %create the matrix row by row with the pattern
 Q2i = [4:dif:16;19:dif:31;34:dif:46;49:dif:61]
         %ii
+        %create the matrix column by columnn with the pattern set by dif
 dif = 15;
 Q2ii = [4:dif:49;7:dif:52;10:dif:55;13:dif:58;16:dif:61]'
         %iii
+        %make the first array with a 1d vector using the reshape
 Q2111 = reshape(4:3:61,5,4)'
         %
 %************************************************question 3************************************************
@@ -40,14 +43,19 @@ pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
+        %make the random matrix
 Mrand = randi([12,25],6,5)
         %i
+        %make a matrix with the first third and fifth columns
 Q4i = Mrand(:,[1,3,5]);
         %ii
+        %make a matrix with the first second and fourth rows
 Q4ii = Mrand([1,2,4,],:);
         %iii
+        
 Q4iii = Mrand([2,4,6],[1,2,end]);
         %iv
+        %transpose the original matrix
 Q4iv = Mrand(:)'
 
 %************************************************question 5************************************************
