@@ -38,6 +38,7 @@ p4=[p4;p5;p6]
 pFinal=[p1,p4]
 
 pFinal=zeros(5,6)
+%finish this
 
         %question 4
 Mrand = randi([12,25],6,5)
