@@ -10,8 +10,10 @@ Q1ii = size(vector1)
 vector2 = [vector1(1:2:end)]
 
 %************************************************question 2************************************************
-        %i
+        
+        %amount each value will change accross the rows
 dif = 3;
+        %i
 Q2i = [4:dif:16;19:dif:31;34:dif:46;49:dif:61]
         %ii
 dif = 15;
