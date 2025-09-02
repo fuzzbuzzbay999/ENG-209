@@ -1,9 +1,6 @@
-%homework 
-%Juliano Declan
-%ENG209
-%HW2
-%8/29/2025
-        %question 1
+% Juliano_Declan_ENG209_HW2.m
+
+%************************************************question 1************************************************
 vector1 = [2 6 10 14 18 22 26 30 34];
         %i
 Q1i= sum(vector1)
@@ -12,7 +9,7 @@ Q1ii = size(vector1)
         %iii
 vector2 = [vector1(1:2:end)]
 
-        %question 2
+%************************************************question 2************************************************
         %i
 dif = 3;
 Q2i = [4:dif:16;19:dif:31;34:dif:46;49:dif:61]
@@ -22,7 +19,7 @@ Q2ii = [4:dif:49;7:dif:52;10:dif:55;13:dif:58;16:dif:61]'
         %iii
 Q2111 = reshape(4:3:61,5,4)'
         %
-        %question 3\
+%************************************************question 3************************************************
 
 
 p1=zeros(2,3)
@@ -40,7 +37,7 @@ pFinal=[p1,p4]
 pFinal=zeros(5,6)
 %finish this
 
-        %question 4
+%************************************************question 4************************************************
 Mrand = randi([12,25],6,5)
         %i
 Q4i = Mrand(:,[1,3,5]);
@@ -51,7 +48,7 @@ Q4iii = Mrand([2,4,6],[1,2,end]);
         %iv
 Q4iv = Mrand(:)'
 
-        %question 5
+%************************************************question 5************************************************
 A=randi([-2,7],5,5)
 B=randi([-2,7],5,5)
 C=rand(5,1)
@@ -91,9 +88,9 @@ Q5xv = A.^3
         %xvi
 
 
-        %question 6
+%************************************************question 6************************************************
 
-s2='Hello World'
+s2='Hello World!'
         %i
 Q6i = length(s2)
         %ii
@@ -105,14 +102,26 @@ Q6iv = length(class(s2))
         %v
 Q6v = size(class(s2))
         
-        %question 7
-student = struct('name','','age','','enrolment',0.00)
-        for i=1:3
-            disp(['Enter details for student ', num2str(i), ':'])
-            disp('name')
-            student(i).name = input('','s');
-            disp('age')
-            student(i).age = input('age','s');
-            disp('enrolment number')
-            student(i).enrolment = input('enrolment number','s');
+%************************************************question 7************************************************
+        %create the struct
+student = struct('College_name',{''},'semester',{''},'enrolment',{});
+%values to populate it with
+College_names={'pima','UofA','ASU'};
+semesters={'Fall','Spring','Summer'};
+enrolments={221201,2022,2023};
+        %populate the 3 sruct items
+        for i=1:length(College_names)
+        student(i).College_name=College_names{i};
+        student(i).semester=semesters{i};
+        student(i).enrolment=enrolments{i};
         end
+        % disp the struct info at the element
+line_item = sprintf('%s; %s; %d',student(1).College_name,student(1).semester,student(1).enrolment);
+disp(line_item)
+
+%************************************************question 8************************************************
+        %cell array
+line_item = cell([student(2).College_name,student(2).semester,num2cell([student(2).enrolment])])
+        %cell to char
+line_item = sprintf('%s; %s; %d', line_item{1,1},line_item{1,2},line_item{1,3})
+disp(line_item)
