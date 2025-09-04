@@ -131,7 +131,7 @@ disp(line_item)
 
 %************************************************question 8************************************************
         %cell array
-line_item = cell([student(2).College_name,student(2).semester,num2cell([student(2).enrolment])])
+line_item = [student(2).College_name,student(2).semester,num2cell([student(2).enrolment])]
         %cell to char
-line_item = sprintf('%s; %s; %d', line_item{1,1},line_item{1,2},line_item{1,3})
+%line_item = sprintf('%s; %s; %d', line_item{1,1},line_item{1,2},line_item{1,3})
 disp(line_item)
