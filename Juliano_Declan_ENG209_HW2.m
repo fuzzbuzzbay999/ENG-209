@@ -1,4 +1,5 @@
 % Juliano_Declan_ENG209_HW2.m
+% ENG 209, HW 2, exercises:
 
 %************************************************question 1************************************************
 vector1 = [2 6 10 14 18 22 26 30 34];
@@ -10,7 +11,7 @@ Q1ii = size(vector1)
 vector2 = [vector1(1:2:end)]
 
 %************************************************question 2************************************************
-        % Create the following matrix in 3 different methods without explicity using the indices of numbers
+        % The goal is to create the following matrix in 3 different methods without explicity using the indices of numbers
         %{
         4 7 10 13 16
         19 22 25 28 31
@@ -19,18 +20,21 @@ vector2 = [vector1(1:2:end)]
         %}
 
         
-        %amount each value will change accross the rows
+        %amount each value changes accross the rows
 dif = 3;
         %i
-        %create the matrix row by row with the pattern
+        %create the matrix row by row with the same pattern accross rows 
 Q2i = [4:dif:16;19:dif:31;34:dif:46;49:dif:61]
         %ii
-        %create the matrix column by columnn with the pattern set by dif
+        %amount each value changes accross columns
 dif = 15;
+        %create the matrix column by columnn with the pattern set by dif
 Q2ii = [4:dif:49;7:dif:52;10:dif:55;13:dif:58;16:dif:61]'
         %iii
-        %make the first array with a 1d vector using the reshape
-Q2111 = reshape(4:3:61,5,4)'
+        %make the first array from a 1d vector (from the fist to last number spaced by how much each value changes accross rows.)
+dif=3;
+        %make the vector then reshape and transpose it.
+Q2111 = reshape(4:dif:61,5,4)'
         %
 %************************************************question 3************************************************
 
@@ -51,7 +55,7 @@ pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
-%The goal is to make a random matrix of integers form 12 to 25 and manipulate the matrix in various ways
+%The goal is to make a 6x5 random matrix of integers from 12 to 25 and make several submatrixies.
         %make the random matrix
 Mrand = randi([12,25],6,5)
         %i
@@ -136,13 +140,22 @@ College_names={'pima','UofA','ASU'};
 semesters={'Fall','Spring','Summer'};
 enrolments={221201,2022,2023};
 
-        %populate the 3 strut indices
-for i=1:length(College_names)
+        %populate the 3 strut indices (i)
+i=1
         student(i).College_name=College_names{i};
         student(i).semester=semesters{i};
         student(i).enrolment=enrolments{i};
-end
-        %display the struct info at the first element. Trying out sprintf
+i=2
+        student(i).College_name=College_names{i};
+        student(i).semester=semesters{i};
+        student(i).enrolment=enrolments{i};
+i=3
+        student(i).College_name=College_names{i};
+        student(i).semester=semesters{i};
+        student(i).enrolment=enrolments{i};
+
+
+        %display the struct info at the first element. Trying out sprintf in the process
 line_item = sprintf('%s; %s; %d',student(1).College_name,student(1).semester,student(1).enrolment);
 disp(line_item)
 
