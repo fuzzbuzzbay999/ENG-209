@@ -51,7 +51,7 @@ pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
-%the goal is to make a random matrix of integers form 12 to 25 and manipulate the matrix in various ways
+%The goal is to make a random matrix of integers form 12 to 25 and manipulate the matrix in various ways
         %make the random matrix
 Mrand = randi([12,25],6,5)
         %i
@@ -123,7 +123,7 @@ Q6v = size(class(s2))
         
 %************************************************question 7************************************************
 %{
-Create a struct array with the following fields and their given classes:
+The goal is to create a struct array with the following fields and their given classes:
 • College name (char)
 • Semester (char)
 • Enrollment (double)
@@ -142,13 +142,12 @@ for i=1:length(College_names)
         student(i).semester=semesters{i};
         student(i).enrolment=enrolments{i};
 end
-        % disp the struct info at the first element. Trying out sprintf
+        %display the struct info at the first element. Trying out sprintf
 line_item = sprintf('%s; %s; %d',student(1).College_name,student(1).semester,student(1).enrolment);
 disp(line_item)
 
 %************************************************question 8************************************************
         %cell array using the second student
 line_item = [student(2).College_name,student(2).semester,num2cell([student(2).enrolment])]
-        %cell to char
-%line_item = sprintf('%s; %s; %d', line_item{1,1},line_item{1,2},line_item{1,3})
+
 disp(line_item)
