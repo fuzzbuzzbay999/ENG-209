@@ -10,6 +10,14 @@ Q1ii = size(vector1)
 vector2 = [vector1(1:2:end)]
 
 %************************************************question 2************************************************
+        % Create the following matrix in 3 different methods without explicity using the indices of numbers
+        %{
+        4 7 10 13 16
+        19 22 25 28 31
+        34 37 40 43 46
+        49 52 55 58 61
+        %}
+
         
         %amount each value will change accross the rows
 dif = 3;
@@ -43,6 +51,7 @@ pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
+%the goal is to make a random matrix of integers form 12 to 25 and manipulate the matrix in various ways
         %make the random matrix
 Mrand = randi([12,25],6,5)
         %i
@@ -52,7 +61,7 @@ Q4i = Mrand(:,[1,3,5]);
         %make a matrix with the first second and fourth rows
 Q4ii = Mrand([1,2,4,],:);
         %iii
-        
+        %Create a 3 × 3 matrix from the second, fourth, and sixth rows and the first, second, and last columns of the original 
 Q4iii = Mrand([2,4,6],[1,2,end]);
         %iv
         %turn the original matrix into a single row, with reading the elements across each column
@@ -113,24 +122,32 @@ Q6iv = length(class(s2))
 Q6v = size(class(s2))
         
 %************************************************question 7************************************************
-        %create the struct
+%{
+Create a struct array with the following fields and their given classes:
+• College name (char)
+• Semester (char)
+• Enrollment (double)
+and populate it
+%}
+        %create the struct (with the form 'char','char',double)
 student = struct('College_name',{''},'semester',{''},'enrolment',{});
-%values to populate it with
+        %values to populate it with (in groups of three)
 College_names={'pima','UofA','ASU'};
 semesters={'Fall','Spring','Summer'};
 enrolments={221201,2022,2023};
-        %populate the 3 sruct items
-        for i=1:length(College_names)
+
+        %populate the 3 strut indices
+for i=1:length(College_names)
         student(i).College_name=College_names{i};
         student(i).semester=semesters{i};
         student(i).enrolment=enrolments{i};
-        end
-        % disp the struct info at the element
+end
+        % disp the struct info at the first element. Trying out sprintf
 line_item = sprintf('%s; %s; %d',student(1).College_name,student(1).semester,student(1).enrolment);
 disp(line_item)
 
 %************************************************question 8************************************************
-        %cell array
+        %cell array using the second student
 line_item = [student(2).College_name,student(2).semester,num2cell([student(2).enrolment])]
         %cell to char
 %line_item = sprintf('%s; %s; %d', line_item{1,1},line_item{1,2},line_item{1,3})
