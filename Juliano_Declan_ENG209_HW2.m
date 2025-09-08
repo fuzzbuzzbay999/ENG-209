@@ -55,8 +55,8 @@ Q4ii = Mrand([1,2,4,],:);
         
 Q4iii = Mrand([2,4,6],[1,2,end]);
         %iv
-        %transpose the original matrix
-Q4iv = Mrand(:)'
+        %turn the original matrix into a single row, with reading the elements across each column
+Q4iv = reshape(Mrand',1,[])
 
 %************************************************question 5************************************************
 A=randi([-2,7],5,5)
@@ -70,7 +70,7 @@ Q5ii = (A+B)*C
         %iii
 Q5iii = A*C+B*C
         %iv
-%the two are the same because of the distributive property
+disp('the two are the same because of the distributive property')
         %v
 Q5v = A*B
         %vi
