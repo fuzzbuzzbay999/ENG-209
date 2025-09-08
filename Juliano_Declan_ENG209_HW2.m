@@ -55,7 +55,7 @@ pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
-%The goal is to make a 6x5 random matrix of integers from 12 to 25 and make several submatrixies.
+%The goal is to make a 6x5 random matrix of integers from 12 to 25 and make several submatrices.
         %make the random matrix
 Mrand = randi([12,25],6,5)
         %i
