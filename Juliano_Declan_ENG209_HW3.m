@@ -5,22 +5,52 @@
 
 %***************************************question 1********************************
 %{ 
-The goal is to load a text file and create a plot using the data included.
+The goal is to load a text file and create a plot using the included data.
 the text file 'mrna2021.txt' must be located in the same folder
 %}
 
+%load the text file
 data = load('mrna2021.txt');
-data_x=data(:,1);
-data_y=data(:,2);
 
+%set data_x and y to the columns of the text file
+month=data(:,1);
+share=data(:,2);
+
+%create the heading
+disp('Moderna, Inc. Share Prices (2021)');
+fprintf('%-10s %-15s\n', 'Month', 'Share Price');
+fprintf('%-10s %-15s\n', '-----', '-----------');
+
+%A for loop is required to get the proper formatting, otherwise fprint freaks out.
+for i=1:length(month)
+       fprintf('%-10d %-15.2f\n', month(i), share(i));
+end
+
+%write data to an xlsx
+
+%write the data with a heading)
+name='mrna2021_HEADING.xlsx';                    %name of xlsx        
+heading = ['month','share price'];              %create the header
+data_to_write = [month,share];                  %create the data to write
+writematrix(heading,name,'Range','A1')          %write the header to the xlsx
+writematrix(data_to_write,name,'Range','A2')    %write the body to the xlsx on the next line (A2)
+
+%write the data without a heading
+name='mrna2021_NO_HEADING.xlsx';                %name of xlsx   
+writematrix(data_to_write,name)  
+
+
+%plotting the data
 %subplot 1
 subplot(1,3,1)
-plot(data_x,data_y,'mo')        %plot data as purple circles
+
+%plot data as purple circles
+plot(month,share,'mo')        
 
 %set the title and axis, enable grid
-title("Shares per month")
+title("Share price per month")
 xlabel("Months")
-ylabel("Shares")
+ylabel("Share price")
 grid on
 
 
@@ -74,10 +104,12 @@ F = (G * (M1 * M2))./( R.^2);   %calculate weight (N)
 
 %convert altitude to km
 alt = alt/1000;
+
 %subplot 3
 subplot(1,3,3)
-plot(alt,F)
 
+%plot the data
+plot(alt,F)
 
 %set title and axis,enable grid
 title("How altitude affects weight")
