@@ -22,9 +22,37 @@ fprintf('%-10s %-15s\n', 'Month', 'Share Price');
 fprintf('%-10s %-15s\n', '-----', '-----------');
 
 %A for loop is required to get the proper formatting, otherwise fprint freaks out.
+%{ 
 for i = 1:length(month)
        fprintf('%-10d %-15.2f\n', month(i), share(i));
 end
+%}
+
+%Since forloops arent allowed, heres a non forloop version
+i=1;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=2;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=3;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=4;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=5;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=6;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=7;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=8;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=9;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=10;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=11;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
+i=12;
+fprintf('%-10d %-15.2f\n', month(i), share(i));
 
 %write data to an xlsx
 
