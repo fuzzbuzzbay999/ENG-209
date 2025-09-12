@@ -5,7 +5,7 @@
 
 %***************************************question 1********************************
 %{ 
-The goal is to load a text file and create a plot using the included data.
+The goal is to load a text file, write it to an xlsx and  create a plot using the included data.
 the text file 'mrna2021.txt' must be located in the same folder
 %}
 
@@ -13,8 +13,8 @@ the text file 'mrna2021.txt' must be located in the same folder
 data = load('mrna2021.txt');
 
 %set data_x and y to the columns of the text file
-month=data(:,1);
-share=data(:,2);
+month = data(:,1);
+share = data(:,2);
 
 %create the heading
 disp('Moderna, Inc. Share Prices (2021)');
@@ -22,14 +22,14 @@ fprintf('%-10s %-15s\n', 'Month', 'Share Price');
 fprintf('%-10s %-15s\n', '-----', '-----------');
 
 %A for loop is required to get the proper formatting, otherwise fprint freaks out.
-for i=1:length(month)
+for i = 1:length(month)
        fprintf('%-10d %-15.2f\n', month(i), share(i));
 end
 
 %write data to an xlsx
 
 %write the data with a heading)
-name='mrna2021_HEADING.xlsx';                    %name of xlsx        
+name = 'mrna2021_HEADING.xlsx';                    %name of xlsx        
 heading = ['month','share price'];              %create the header
 data_to_write = [month,share];                  %create the data to write
 writematrix(heading,name,'Range','A1')          %write the header to the xlsx
