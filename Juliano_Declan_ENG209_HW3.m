@@ -18,7 +18,7 @@ subplot(1,3,1)
 plot(data_x,data_y,'mo')        %plot data as purple circles
 
 %set the title and axis, enable grid
-title("shares per month")
+title("Shares per month")
 xlabel("Months")
 ylabel("Shares")
 grid on
