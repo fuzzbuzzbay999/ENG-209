@@ -59,9 +59,9 @@ view(-60,30)
 
 
 %question 5
-% the goal is to compute and graph the electric potential at any point arround two charges, one is positive and the other is negative and their sepperation is 0.001 meters
+% The goal is to compute and graph the electric potential at any point arround two charges, one is positive and the other is negative and their sepperation is 0.001 meters
 
-% variables
+% Variables
 Epsilon = 8.52e-12;     %Permittivity of free space (s^4 A^2) * (m^-3 kg^-1)
 Q = 1e-6;               %Particle charge (coulombs)
 seperation = 0.001;     %Seperation of the two particles (m)
@@ -93,8 +93,8 @@ colorbar;
 figure(6)
 contour(X,Y,v,10);
 hold on
-plot(L,0,"r*","DisplayName",'Q');   %positive particle
-plot(-L,0,'b*',"DisplayName",'-Q'); %negative particle
+plot(L,0,"r*","DisplayName",'Q');   %Positive particle
+plot(-L,0,'b*',"DisplayName",'-Q'); %Negative particle
 hold off
 
 % Set the axis, and title 
