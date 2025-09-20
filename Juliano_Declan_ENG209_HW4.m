@@ -12,9 +12,9 @@
 t = [0:0.1:30];
 
 % Equate x,y,z for all values of t
-x = (1 - 0.45 * cos(65 * t)) .* cos(t)
-y = (1 - 0.45 * cos(65 * t)) .* sin(t)
-z = t + sin(65*t)
+x = (1 - 0.45 * cos(65 * t)) .* cos(t);
+y = (1 - 0.45 * cos(65 * t)) .* sin(t);
+z = t + sin(65*t);
 
 % Plot the graph in 3d space under figure 1
 figure(1);
