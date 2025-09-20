@@ -1,6 +1,15 @@
-x =linspace(-8*pi,8*pi,200);
-y=x;
-[X,Y]=meshgrid(x,y);
-z=sin(sqrt(X.^2+Y.^2))./sqrt(X.^2+Y.^2);
-mesh(X,Y,z)
-title('Graph $$z = \sqrt{x^2+y^2}$$', 'Interpreter',"latex")
+
+g=9.81
+h=50:50:600
+
+t=sqrt(2*h./g)
+
+plot(t,h)
+title("Time in air vs Height")
+xlabel("Time (sec)")
+ylabel("Height (m)")
+
+fprintf('%10s\t%10s\n','height(m)','time(s)')
+
+d=[h;t];
+fprintf('%10d\t%10.2f\n',d)

@@ -46,12 +46,8 @@ p4 = eye(3,3)
 p5=ones(1,3)
 p6=5*ones(1,3)
 
-p1=[p1;p2;p3]
-p4=[p4;p5;p6]
+pFinal=[[p1;p2;p3], [p4;p5;p6]]
 
-pFinal=[p1,p4]
-
-pFinal=zeros(5,6)
 %finish this
 
 %************************************************question 4************************************************
@@ -140,7 +136,7 @@ College_names={'pima','UofA','ASU'};
 semesters={'Fall','Spring','Summer'};
 enrolments={221201,2022,2023};
 
-        %populate the 3 strut indices (i)
+        %populate the 3 struct indices (i)
 i=1
         student(i).College_name=College_names{i};
         student(i).semester=semesters{i};
