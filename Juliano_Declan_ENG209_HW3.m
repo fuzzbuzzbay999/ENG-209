@@ -57,7 +57,7 @@ fprintf('%-10d %-15.2f\n', month(i), share(i));
 %write data to an xlsx
 
 %write the data with a heading)
-name = 'mrna2021_HEADING.xlsx';                    %name of xlsx        
+name = 'mrna2021_HEADING.xlsx';                 %name of xlsx        
 heading = ['month','share price'];              %create the header
 data_to_write = [month,share];                  %create the data to write
 writematrix(heading,name,'Range','A1')          %write the header to the xlsx
