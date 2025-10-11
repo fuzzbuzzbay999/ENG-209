@@ -1,4 +1,3 @@
-
 %Juliano_Declan_ENG209_HW6
 %10/9/2025
 %ENG 209, HW 5, exercises:
@@ -25,6 +24,12 @@ for i =1:length(a)
 end
 % Print the total amount of triples
 fprintf('There were %i pythagorean triples\n',nCount)
+
+% Do the same but use vector opperations
+% Make a logical array, where the index is 1 if a,b,c a triple and a 0 if not
+isPythag = (a.^2+b.^2)==c.^2;
+% Print the total amount of triples
+fprintf('Using vecotor operations there were %i pythagorean triples\n',sum(isPythag))
 
 %***************************************question 4********************************
 %{
