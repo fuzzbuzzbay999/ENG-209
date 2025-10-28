@@ -1,6 +1,6 @@
 %Juliano_Declan_ENG209_HW6
 %10/9/2025
-%ENG 209, HW 5, exercises:
+%ENG 209, HW 6, exercises:
 
 %***************************************question 3********************************
 %{
