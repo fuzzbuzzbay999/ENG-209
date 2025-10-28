@@ -23,7 +23,6 @@ x1 = coef\sol;
 disp('The solution to the system of equations is:')
 disp(x1)
 
-
 %***************************************question 5********************************
 %{
 Using collected data regarding the force exerted by a spring when stretched to certain lengths. Use the line of best fit to calculate the spring constant
@@ -34,7 +33,7 @@ displacement = data(:,1);       % Displacement (m)
 force = data(:,2);              % Force (N)
 
 linRegSpring = polyfit(displacement,force,1);   % Line of best fit
-slope = linRegSpring(1);     % spring constant is the slope of the best fit line.
+slope = linRegSpring(1);        % spring constant is the slope of the best fit line.
 intercept = linRegSpring(2);    % Y intercept
 
 % Figure 1
