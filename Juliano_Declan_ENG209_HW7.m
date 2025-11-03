@@ -18,7 +18,7 @@ coef = [1, 0, 1, 2; -2, 1, 0, 0; 1, 2, -1, 0; 2, 1, 3, -2];
 sol = [6; -3; -2; 0];
 
 % Solve the system using the backslash operator
-x1 = coef\sol;
+x1 = inv(coef)*sol;
 % Display the solution
 disp('The solution to the system of equations is:')
 disp(x1)
