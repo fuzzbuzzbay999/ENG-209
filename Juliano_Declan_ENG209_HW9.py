@@ -12,12 +12,16 @@ Create a list from -3 to 81
 Create a string 'abcabcabcabcabcabcabcabcabcabc'
 Create a list with 10 elements of 'abc'
 '''
+# list from 10 to 1
 x = list(range(1,11)[::-1])
 
+# list from -3 to 81
 x = list(3 * i for i in range(-1,28))
 
+# string 'abc' repeated 10 times
 x = 'abc'*10
 
+# list with 10 elements of 'abc'
 x = ['abc']*10
 
 #***************************************question 2********************************
@@ -25,37 +29,43 @@ x = ['abc']*10
 perform the following computations
 (i) sin 60°
 (ii) sin 60
-(iii)3+4\5
-(iv) 7
-6+5
+(iii)(3+4)/5
+(iv) 7/(6+5)
 (v) ln 1000
 (vi) log10 1000
 (vii) 23+7
-(viii) 𝑒10
-(ix) tan(𝜋
-3)
-sin(0.4𝜋) + tan2 60°
+(viii) 𝑒^10
+(ix) tan(𝜋/3)/sin(0.4𝜋) + tan2 60°
 (x) 14+ 64^1/3/5.2×4.7 + 2.14^4−4.7/35−√4.5
 '''
-
+# i
 x = sin(radians(60))
 
+# ii
 x = sin(60)
 
+# iii
 x = (3+4)/5
 
+# iv
 x = 7/(6+5)
 
+# v
 x = log(1000)
 
+# vi
 x = log10(1000)
 
+# vii
 x = pow(2,3+7)
 
+# viii
 x = exp(10)
 
+# ix
 x = tan(pi/3)/sin(0.4*pi)+tan(radians(60))**2
 
+# x
 x = (14 + 64**(1/3))/(5.2*4.7) + (2.1**4-4.7)/(35-sqrt(4.5))
 
 #***************************************question 7********************************
