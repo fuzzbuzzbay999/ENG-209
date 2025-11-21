@@ -5,6 +5,7 @@
 
 # import all of math
 from math import *
+
 #***************************************question 1********************************
 '''
 Create a list from 10 to 1
