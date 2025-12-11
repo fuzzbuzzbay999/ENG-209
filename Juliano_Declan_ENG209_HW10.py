@@ -88,8 +88,8 @@ a = 0       # start km
 b = 1000    # end km
 d = 10      # distance km
 
-r2 = n.arange(a,b,d,dtype='float64')  # distance from earth surface in km force 64 bit numbers because numpy and python are absolute pieces of garbage
-
+r2 = n.arange(a,b,d,dtype='float')  # distance from earth surface in km force 64 bit numbers because numpy and python are absolute pieces of garbage
+print(n.square(r+r2*1000))
 
 # function to calculate gravitational force at a given distance from the earth's surface
 def grav(R):

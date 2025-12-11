@@ -19,14 +19,18 @@ print(ax.get_zticks())
 a = 1; b = 2; h = 0.1
 n = int(round((b-a)/h)) + 1
 x = np.linspace(a,b,n)
-xdir = x[0:len(x)-1]
 y = x * np.log(x)
 yext = 1+np.log(x)
-yest = (y[1:n]-y[0:n-1])/h
+yfwd = (y[1:n]-y[0:n-1])/h
+ycent = (y[2:n]-y[0:n-2])/(2*h)
+ybak = (y[1:n]-y[0:n-1])/h
+
 fig = plt.figure()
 fx = fig.add_subplot()
 fx.plot(x,yext,label = 'exact deriv')
-fx.plot(xdir,yest,label = 'estimated deriv')
+fx.plot(x[:-1],yfwd, label = 'forward deriv')
+fx.plot(x[1:-1],ycent, label = 'center deriv')
+fx.plot(x[1:],ybak,label = 'back deriv')
 fx.legend()
 
 a = 0; b = 6; h = 0.01
